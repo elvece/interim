@@ -1,1 +1,24 @@
-/* add custom styles */
+path,
+line {
+  fill: none;
+  stroke: #2a3745;
+  /*stroke-width: 2;*/
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+.lv-path{
+  stroke-dasharray: 110;
+  animation: draw 5s linear infinite;
+}
+
+
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 110;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
