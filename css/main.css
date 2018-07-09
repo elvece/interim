@@ -1,24 +1,141 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    /* background: url() no-repeat center center fixed; */
+    /* background-size: cover;
+    overflow: visible; */
+}
+
+
 path,
 line {
   fill: none;
   stroke: #2a3745;
-  /*stroke-width: 2;*/
+  stroke-width: 0.75;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
 
-.lv-path{
-  stroke-dasharray: 110;
-  animation: draw 5s linear infinite;
+.lv-path {
+  stroke-dasharray: 420;
+  animation: draw 7s linear infinite;
 }
 
-
 @keyframes draw {
-    0% {
-        stroke-dashoffset: 110;
+    70% {
+        stroke-dashoffset: 268;
     }
     100% {
         stroke-dashoffset: 0;
     }
+}
+
+.soon-box:hover {
+    cursor: crosshair;
+}
+
+.text {
+    text-align: center;
+    position: relative;
+    font-size: 8em;
+    line-height: 1;
+}
+
+.text--yaku {
+    color: rgba(39, 38, 38, 0.929);
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.7em;
+    font-size: 1em;
+    overflow: hidden;
+    padding: 0 0 10px;
+}
+/* #045d52 */
+
+.text--yaku span {
+    display: inline-block;
+    position: relative;
+    -webkit-transform: perspective(1000px) rotate3d(0, 1, 0, 0deg);
+    transform: perspective(1000px) rotate3d(0, 1, 0, 0deg);
+    -webkit-transition: -webkit-transform 0.5s, color 0.5s;
+    transition: transform 0.5s, color 0.5s;
+}
+
+.text--yaku:hover span {
+    color: #1e1a1b;
+    -webkit-transform: perspective(1000px) rotate3d(0, 1, 0, 360deg);
+    transform: perspective(1000px) rotate3d(0, 1, 0, 360deg);
+}
+
+.text--yaku span:nth-child(4n),
+.text--yaku:hover span:first-child {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.text--yaku span:nth-child(3n),
+.text--yaku:hover span:nth-child(2n) {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.text--yaku span:nth-child(2n),
+.text--yaku:hover span:nth-child(3n) {
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.text--yaku span:first-child,
+.text--yaku:hover span:nth-child(4n) {
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.social-icons img {
+    width: 1.9em;
+    height: 1.9em;
+}
+
+.social-icons {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+    text-align: center;
+}
+
+.social-icons li {
+    display: inline;
+    margin: 0 3.7px;
+    padding: 0;
+}
+
+.social-icons li a {
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    opacity: 0.83;
+    text-decoration: none;
+}
+
+.social-icons li a:hover {
+    opacity: 0.4;
+}
+
+.container {
+    min-height: 100%;
+    height:100%;
+    position: relative;
+}
+
+.content {
+    padding: 10px;
+    padding-bottom: 60px;
+}
+.footer {
+    padding: 15px 5px;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;
 }
